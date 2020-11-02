@@ -1,0 +1,15 @@
+#prev {
+    display: none;
+}
+
+#next {
+    display: inline-block;
+}
+
+#submit {
+    display: none;
+}
+
+#start {
+    display: none;
+}
