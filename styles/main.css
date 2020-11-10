@@ -1,20 +1,51 @@
-.container{
-    width: 700px;
-    margin: 150px auto;
+.container {
+	width: 700px;
+	height: 300px;
+	padding: 16px 25px;
+	background-color: cyan;
+	border-radius: 10px;
+	margin: 150px auto;
+	box-sizing: border-box;
+	font-family: sans-serif;
+    user-select: none;
+    position: relative;
+}
+
+#answers div{
+    margin-top: 5px;
+}
+
+.button-group {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.button {
+	cursor: pointer;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 #prev {
-    display: none;
+	display: none;
+	background-color: #5a6268;
 }
 
 #next {
-    display: inline-block;
+	display: inline-block;
+    background-color: #0069d9;
+    margin-left: 10px;
 }
 
 #submit {
-    display: none;
+	display: none;
+    background-color: #218838;
+    margin-left: 10px;
 }
 
 #start {
-    display: none;
+	display: none;
+	background-color: #c82333;
 }

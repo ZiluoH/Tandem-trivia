@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tandem Trivia Training Project</title>
-    <script src="./scripts/main.js"></script>
-    <link rel="stylesheet" href="./styles/main.css">
-</head>
-<body>
-    <div class="container">
-        <div class="title">
-            <h1>Tandem Trivia Training App</h1>
-        </div>
-        <div id="quiz">
-            <div class="question">
-                <h3 id="questionContent"></h3>
-            </div>
-            <div id="answers">
-            </div>
-            <div id="prev" onclick="quiz.prevQuestion()">Prev</div>
-            <div id="next" onclick="quiz.nextQuestion()">Next</div>
-            <div id="submit" onclick="quiz.submitQuiz()">Submit</div>
-            <div id="start" onclick="start()">Start</div>
-        </div>
-    </div>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tandem Trivia Training Project</title>
+		<script src="./scripts/main.js"></script>
+		<link rel="stylesheet" href="./styles/main.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="title">
+				<h1>Tandem Trivia Training App</h1>
+			</div>
+			<div id="quiz">
+				<div class="question">
+					<h3 id="questionContent"></h3>
+				</div>
+				<div id="answers"></div>
+				<div class="button-group">
+					<div class="button" id="prev" onclick="quiz.prevQuestion()">Prev</div>
+					<div class="button" id="next" onclick="quiz.nextQuestion()">Next</div>
+					<div class="button" id="submit" onclick="quiz.submitQuiz()">Submit</div>
+					<div class="button" id="start" onclick="start()">Start</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
