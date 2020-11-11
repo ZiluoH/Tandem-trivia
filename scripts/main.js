@@ -1,18 +1,3 @@
-// use fetch API to read json data
-// fetch('data.json').then(function(response){
-//     return response.json()
-// }).then(function(obj){
-//     console.log(obj);
-// }).catch(function(error){
-//     console.error('Something went wrong with retrieving the data!')
-//     console.error(error)
-// })
-
-// function createQuestionList(data){
-//     let questionList = [];
-
-// }
-
 class Quiz{
     constructor() {
         this.data = null;
@@ -49,6 +34,8 @@ class Quiz{
         answersDiv.innerHTML = "";
         //get all choice base on current question idx
         let allChoice = this.data[this.questionList[this.questionCounter]].incorrect.concat(this.data[this.questionList[this.questionCounter]].correct);
+
+        allChoice = shuffle(allChoice);
         // if (answersDiv.childElementCount == 0) {
         for (let i = 0; i < allChoice.length; i++) {
             const choiceInput = document.createElement('input');
@@ -161,6 +148,15 @@ fetch('data.json').then(function(response){
     console.error('Something went wrong with retrieving the data!')
     console.error(error)
 })
+
+// shuffle answers
+function shuffle(arr){
+    for(let i = arr.length - 1; i > 0; i--){
+        let j = Math.floor(Math.random()*(i + 1));
+        [arr[i], arr[j]] = [arr[j],arr[i]];
+    }
+    return arr
+}
 
 // create quiz when DOM ready
 let quiz = new Quiz();
